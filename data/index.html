@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Smart Roller</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <h1>Smart Roller</h1>
+
+    <div id="toast" class="toast"></div>
+
+    <!-- Управление -->
+    <div class="card">
+      <h2>Управление</h2>
+
+      <div class="buttons">
+        <button class="open" onclick="openBlind()">Открыть</button>
+        <button class="close" onclick="closeBlind()">Закрыть</button>
+      </div>
+
+      <div class="slider-container">
+        <input type="range" min="0" max="100" id="slider"
+               oninput="updateValue(this.value)"
+               onchange="setPosition(this.value)">
+        <div class="value" id="value"></div>
+      </div>
+    </div>
+
+    <!-- Расписание -->
+    <div class="card">
+      <h2>Расписание</h2>
+
+      <div class="schedule">
+        <label>Открыть в:</label>
+        <input type="time" id="openTime">
+
+        <label>Закрыть в:</label>
+        <input type="time" id="closeTime">
+
+        <label class="checkbox-row">
+          <input type="checkbox" id="onceEvent" checked>
+          Выполнить один раз
+        </label>
+        
+        <button class="save-btn" onclick="saveSchedule()">Сохранить</button>
+      </div>
+    </div>
+
+    <div class="card">
+  <h2>Запланированные события</h2>
+  <div id="eventsList"></div>
+</div>
+
+  </div>
+
+  <script src="js/index.js"></script>
+
+</body>
+</html>

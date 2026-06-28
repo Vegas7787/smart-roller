@@ -1,0 +1,127 @@
+body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 400px;
+      padding: 20px;
+    }
+
+    .toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: #333;
+    color: white;
+
+    padding: 12px 20px;
+    border-radius: 8px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.3s;
+}
+
+.toast.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 16px;
+      margin-bottom: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+
+    .buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    button {
+      flex: 1;
+      padding: 15px;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .open {
+      background: #22c55e;
+    }
+
+    .close {
+      background: #ef4444;
+    }
+
+    button:hover {
+      opacity: 0.85;
+    }
+
+    .slider-container {
+      margin-top: 15px;
+    }
+
+    input[type="range"] {
+      width: 100%;
+    }
+
+    .value {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 18px;
+    }
+
+    .schedule {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    input[type="time"] {
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      background: #0f172a;
+      color: white;
+    }
+
+    .save-btn {
+      background: #3b82f6;
+      margin-top: 10px;  
+    }
+
+#eventsList div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+#eventsList button {
+    background: #ef4444;
+    border: none;
+    padding: 15px;
+    margin-left: 80px;
+    border-radius: 12px;
+    cursor: pointer;
+}
